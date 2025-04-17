@@ -37,7 +37,6 @@ As a volunteer, I want to request and receive a digest of my service hours so th
 ![Use Case Diagram](https://github.com/Sanmeet-EWU/cscd-350-project-code-conquer/blob/96d88688fc552dd4360bf26b8264104944caa01d/Doc/VT%20Use%20Case%20Diagram.png)
 
 
-Doc/
 
 ## Requirements and Specifications:
 There shall be a requirement in which an agency administrator can register their agency with the software. It shall use a MySQL database along with bcrypt to securely store the user data. 
