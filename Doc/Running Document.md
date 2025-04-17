@@ -17,8 +17,6 @@ This software would fill a need that reduces both manual staffing burden, as wel
 
 
 
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/5Wo5gQYL)
-
 Part 1: List of User Stories
 As an agency administrator, I want to register my agency with the software so that I can begin using it.
 As an agency administrator, I want to invite other agency employees/system admins/volunteer coordinators to access the platform so that they can assist with supporting/utilizing the software.
