@@ -17,7 +17,7 @@ This software would fill a need that reduces both manual staffing burden, as wel
 
 
 
-Part 1: List of User Stories
+## User Stories
 As an agency administrator, I want to register my agency with the software so that I can begin using it.
 As an agency administrator, I want to invite other agency employees/system admins/volunteer coordinators to access the platform so that they can assist with supporting/utilizing the software.
 As an agency administrator, I want to deactivate agency employees/system admins/volunteer coordinators so that, once they’ve left the agency, they no longer have access to the platform.
@@ -33,9 +33,9 @@ As a volunteer, I want to scan in/out via QR code when arriving/departing from s
 As a volunteer, I want to request and receive a digest of my service hours so that I can report back to another third party. 
 
 
-Part 2: Use Case Diagram 
+## Case Diagram
 
-Part 3: Requirements and Specifications:
+## Requirements and Specifications:
 There shall be a requirement in which an agency administrator can register their agency with the software. It shall use a MySQL database along with bcrypt to securely store the user data. 
 There shall be a requirement to invite other agency entities to the platform. This shall be done by using a hyperlink sent by email which redirects to the login page. 
 There shall be a requirement which allows agency administrators to remove volunteers who are no longer active. This shall be done by implementing administrative controls in the dashboard which will remove user information from the MySQL database.
@@ -47,7 +47,7 @@ There shall be a requirement which allows agency administrators to view a real t
 There shall be a requirement which allows agency administrators to generate a QR code which will allow volunteers to sign into an associated event. This shall be implemented with an existing QR code generation library.
 There shall be a requirement which allows volunteers to use their camera to scan the QR code and check into an event. This shall be implemented by generating a link which triggers an event in the MySQL database to generate a new tuple in the check in relation. 
 	
-Part 4: Glossary
+## Glossary
 QR (Quick Response) Code: A type of 2D barcode that stores information, such as a website link or contact details, in a square grid of black and white squares. A common way QR codes are processed are by the camera of a personal smartphone. 
 sync: Syncing is the process by which data is shared between two systems using a common, predefined format for the purpose of maintaining an accurate duplication of the data in both systems.
 BCRYPT: is a password hashing algorithm that turns a plain password into a scrambled, secure version that's hard to reverse. It's designed to protect passwords by making it slow and difficult for hackers to guess them using brute force or other attacks.
