@@ -83,14 +83,14 @@ A row in a table. It represents one item or record in the data.
 A web app (short for web application) is a program you use through a web browser, like Chrome or Safari. Instead of installing it on your computer, you just go to a website, and it works online.
 
 
-##Software Architecture
-###System Overview
+## Software Architecture
+### System Overview
 The purpose of our software, VolunTrax, is to ease the burden of tracking the hours served and real-time location of a multitude of volunteers across multiple locations.
 Frontend: This will consist of a web-app/browser based application with the front developed with a mix of CSS, HTML, PHP, and Javascript.
 Backend: The structure of the backend will be hosted on a cloud-based droplet stored on Google gSuite’s Developer Cloud.  The droplet is running Ubuntu, and is hosting the site using Apache.  The database is stored in MySQL, and we are leveraging the “bcrypt” algorithm for user credential security.
 APIs: Messaging will be accomplished using an API with Mailgun.  The QR code generation will be managed with an API to quickcharts.io.
 
-###Data Storage
+### Data Storage
 This application is based on an instance of MySQL with a set of relations that include:
 - Orgs - Table to store the details about the various organizations that will use the application.
 - Users - a table to store user information and credentials along with their organization associations.
@@ -98,17 +98,17 @@ This application is based on an instance of MySQL with a set of relations that i
 - Volunteers - a table of volunteers who are registered to the organization.
 - ER-Contact - a table of emergency contacts associated with the volunteers.
 - Check-in - a table itemizing the checking in and checking out of each volunteer, the time and date of the check in/out, and the location based on a QR code scanned on location.
--- This table will be able to provide both the current location and count of “checked in” volunteers, as well as a digest of hours served, organized by volunteers. 
+	- This table will be able to provide both the current location and count of “checked in” volunteers, as well as a digest of hours served, organized by volunteers. 
  
-###Schema Diagram
-![Schema Diagram](https://github.com/Sanmeet-EWU/cscd-350-project-code-conquer/blob/96d88688fc552dd4360bf26b8264104944caa01d/Doc/Schema%20Diagram.png)
+### Schema Diagram
+![Schema Diagram](https://github.com/Sanmeet-EWU/cscd-350-project-code-conquer/blob/main/Doc/Schema%20Diagram.png)
 
-##Architectural Assumptions
+### Architectural Assumptions
 The architecture assumptions include:  
  - The presence of internet access
  - Volunteers having smartphones capable of QR scanning OR
  - A kiosk present at the location that can be used instead
 
-###Component Diagram
-![Component Diagram](https://github.com/Sanmeet-EWU/cscd-350-project-code-conquer/blob/96d88688fc552dd4360bf26b8264104944caa01d/Doc/Component%20Diagram.png)
+### Component Diagram
+![Component Diagram](https://github.com/Sanmeet-EWU/cscd-350-project-code-conquer/blob/main/Doc/Component%20Diagram.png)
 
