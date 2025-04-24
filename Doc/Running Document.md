@@ -112,3 +112,59 @@ The architecture assumptions include:
 ### Component Diagram
 ![Component Diagram](https://github.com/Sanmeet-EWU/cscd-350-project-code-conquer/blob/main/Doc/Component%20Diagram.png)
 
+## Software Design
+### User Interface Component
+#### Internal design structure
+- Packages:
+	- HTML
+		- Responsibilities: The HTML acts as the skeleton of the web application. It provides structure to the information and data we present to our users. The HTML must be organized in an intuitive manner so that the application is readable and easily accessible to anyone.
+	- Javascript
+		- Responsibilities: Javascript acts as the brains of the web application. It provides functionality to the static HTML components. It provides the ability to open connections between the client and the server. Along with this it handles the logic used to generate the QR code. Another key use is the handling of user sign in and account registration.
+	- CSS
+		- Responsibilities: CSS takes the bare-bones of the HTML and tells our web app how it should look. The CSS should create a web-application which is appealing to our users. It should also provide a consistent design/theme identity throughout the web application. 
+	- JQuery
+		- Responsibilities: JQuery allows us to simplify DOM manipulation, animation handling, event handling and Ajax interactions. Essentially it simplifies many javascript operations in order to speed up the development process.
+	- Tailwind CSS
+		- Responsibilities: Tailwind CSS offers premade CSS styles to use out-of-the-box so that we can speed up development and create a visually appealing web app.
+- Classes:
+	- Window
+		- Responsibilities: The Window class is our main container in the web app. Everything else is a subcomponent of this class. The window class keeps track of session information, ensuring that a logged user is authenticated properly.
+	- Dashboard
+		- Responsibilities: The Dashboard class holds the components related to data presentation and data manipulation. The dashboard class is encapsulated by the Window class so that the dashboard can sync with the data of the application. The user needs to be able to interact with recorded data and to also generate QR codes. Along with this the user will need to be able 
+	- Login/Sign-In Form
+		- Responsibilities: The Login/Sign-In form encapsulated by the Window class. It acts as an interface to input data which can be sent to the Business Component of the application. Apon authentication, the relevant session information is communicated to the Window class so that it can be kept track of across the application. 
+	- Data Viewer/Export Form
+		- Responsibilities: The Data Viewer/Export Form is encapsulated by the Dashboard class. It takes care of retrieving data from the Business Component relevant to the logged session id (The logged administrator) and then presenting that data so that the client can view it. 
+- Modules:
+	- QR Code Generation Library
+		- Responsibilities: This is a pre-built module we will leverage to handle QR code generation. 
+	- Bcrypt Encryption Library
+		- Responsibilities: This is a pre-built module we will leverage to handle password hashing. The component will then send this information to the Business Component.
+
+### Business Component
+#### Internal Design Structure
+- Packages
+	- PHP
+		- Responsibilities: PHP handles logic before our website is served to a client. It allows us to instantiate the client session and set initial variables before the client receives the website. 
+	- APACHE
+		- Responsibilities: APACHE is an open source web server that can serve web content on the internet. APACHE will server HTML/CSS/JAVASCRIPT to our clients from our server.
+- Classes
+	- Session Manager
+		- Responsibilities: The session manager is an object which manages active sessions. It ensures that old sessions are terminated. And that new sessions are properly authenticated. 
+- Modules
+	- QR Code Form
+		- Responsibilities:  The QR Code form is encapsulated by the Dashboard class. It holds all the logic needed to generate a QR Code which embeds a link which can send signals to the Business Component that a volunteer would like to check in.
+
+### Data Access Component
+#### Internal Design Structure
+- Packages
+	- AJAX
+		- Responsibilities: AJAX acts as a data bridge between the client and the server. It handles asynchronous calls from the client and serves data back to it.
+	- MYSQL
+		- Responsibilities: MYSQL is a relational database management system. It will allow us to easily create relations that store different attributes. It will also allow us to easily make queries on existing tables.
+- Classes
+	- Data Manager 
+		- Responsibilities: The Data Manager will act as the bridge between the Business Component and our MYSQL database. It will handle the creation of new tuples in our database along with processing queries for the Business Component.
+
+
+
