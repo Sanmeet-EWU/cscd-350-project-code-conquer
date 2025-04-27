@@ -166,5 +166,13 @@ The architecture assumptions include:
 	- Data Manager 
 		- Responsibilities: The Data Manager will act as the bridge between the Business Component and our MYSQL database. It will handle the creation of new tuples in our database along with processing queries for the Business Component.
 
+### Class Diagram
+![Class Diagram](https://github.com/Sanmeet-EWU/cscd-350-project-code-conquer/blob/main/Doc/class%20diagram.png)
+
+### Activity Diagram
+![Activity Diagram](https://github.com/Sanmeet-EWU/cscd-350-project-code-conquer/blob/main/Doc/Activity%20Diagram.png)
+
+### Sequence Diagram
+![Sequence Diagram](https://github.com/Sanmeet-EWU/cscd-350-project-code-conquer/blob/main/Doc/sequence%20diagram.png)
 
 
