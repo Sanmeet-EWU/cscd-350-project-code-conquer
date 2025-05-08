@@ -1,91 +1,149 @@
+/**
+ * VolunTrax Main JavaScript File
+ */
+
 $(document).ready(function() {
-    // Add hover effect to all buttons
-    $('button').addClass('btn');
-
-    // Add hover effect to stat cards
-    $('.stat-card').hover(
-        function() {
-            $(this).addClass('transform -translate-y-1');
-        },
-        function() {
-            $(this).removeClass('transform -translate-y-1');
-        }
-    );
-
-    // Add hover effect to activity items
-    $('.activity-item').hover(
-        function() {
-            $(this).addClass('transform translate-x-1');
-        },
-        function() {
-            $(this).removeClass('transform translate-x-1');
-        }
-    );
-
-    // Handle New Volunteer button click
-    $('button:contains("New Volunteer")').click(function() {
-        // Show a modal or navigate to new volunteer form
-        alert('New Volunteer form will open here');
-    });
-
-    // Handle View Reports button click
-    $('button:contains("View Reports")').click(function() {
-        // Navigate to reports page
-        alert('Reports page will open here');
-    });
-
-    // Handle Profile button click
-    $('button:contains("Profile")').click(function() {
-        // Show profile dropdown or navigate to profile page
-        alert('Profile menu will open here');
-    });
-
-    // Add smooth scrolling to all links
-    $('a[href^="#"]').on('click', function(e) {
-        e.preventDefault();
-        const target = $(this.hash);
-        if (target.length) {
-            $('html, body').animate({
-                scrollTop: target.offset().top - 20
-            }, 500);
-        }
-    });
-
-    // Add ripple effect to buttons
-    $('.btn').on('click', function(e) {
-        const button = $(this);
-        const ripple = $('<span class="ripple"></span>');
+    // Password visibility toggle
+    $('.password-toggle').on('click', function() {
+        const passwordField = $(this).siblings('input');
+        const icon = $(this).find('i');
         
-        const x = e.pageX - button.offset().left;
-        const y = e.pageY - button.offset().top;
+        if (passwordField.attr('type') === 'password') {
+            passwordField.attr('type', 'text');
+            icon.removeClass('fa-eye').addClass('fa-eye-slash');
+        } else {
+            passwordField.attr('type', 'password');
+            icon.removeClass('fa-eye-slash').addClass('fa-eye');
+        }
+    });
+    
+    // Form validation (simple example)
+    $('form').on('submit', function(e) {
+        let valid = true;
         
-        ripple.css({
-            'left': x,
-            'top': y
+        // Check required fields
+        $(this).find('input[required]').each(function() {
+            if ($(this).val().trim() === '') {
+                $(this).addClass('border-red-500');
+                valid = false;
+            } else {
+                $(this).removeClass('border-red-500');
+            }
         });
         
-        button.append(ripple);
-        
-        setTimeout(function() {
-            ripple.remove();
-        }, 600);
-    });
-
-    // Add loading animation to stat cards
-    $('.stat-card').each(function(index) {
-        const card = $(this);
-        const number = card.find('h3');
-        const target = parseInt(number.text());
-        let current = 0;
-        
-        const increment = target / 20;
-        const interval = setInterval(function() {
-            current += increment;
-            if (current >= target) {
-                clearInterval(interval);
-                current = target;
+        // Check email format if it's an email field
+        const emailField = $(this).find('input[type="email"]');
+        if (emailField.length && emailField.val().trim() !== '') {
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(emailField.val())) {
+                emailField.addClass('border-red-500');
+                valid = false;
             }
-            number.text(Math.floor(current));
-        }, 50);
+        }
+        
+        if (!valid) {
+            e.preventDefault();
+            // Add a validation message at the top of the form
+            const errorMessage = '<div class="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 mb-6" role="alert"><p>Please fix the errors in the form.</p></div>';
+            
+            // Remove any existing error messages
+            $(this).find('.validation-message').remove();
+            
+            // Add the new error message
+            $(this).prepend('<div class="validation-message">' + errorMessage + '</div>');
+            
+            // Scroll to the top of the form
+            $('html, body').animate({
+                scrollTop: $(this).offset().top - 100
+            }, 200);
+        }
+    });
+    
+    // Clear validation errors when user types in the field
+    $('input').on('input', function() {
+        $(this).removeClass('border-red-500');
+    });
+    
+    // Mobile menu toggle
+    $('.mobile-menu-button').on('click', function() {
+        $('.mobile-menu').toggleClass('hidden');
+    });
+    
+    // Notifications dropdown
+    $('.notifications-button').on('click', function() {
+        $('.notifications-dropdown').toggleClass('hidden');
+    });
+    
+    // Close dropdowns when clicking outside
+    $(document).on('click', function(e) {
+        if (!$(e.target).closest('.notifications-button, .notifications-dropdown').length) {
+            $('.notifications-dropdown').addClass('hidden');
+        }
+        
+        if (!$(e.target).closest('.mobile-menu-button, .mobile-menu').length) {
+            $('.mobile-menu').addClass('hidden');
+        }
+    });
+    
+    // QR Code Scanner (placeholder for future implementation)
+    $('#qr-scanner-button').on('click', function() {
+        alert('QR Scanner functionality will be implemented in a future update.');
     });
 });
+
+// Function to copy text to clipboard
+function copyToClipboard(text) {
+    const tempInput = document.createElement('input');
+    tempInput.value = text;
+    document.body.appendChild(tempInput);
+    tempInput.select();
+    document.execCommand('copy');
+    document.body.removeChild(tempInput);
+    
+    // Show a toast notification
+    showToast('Copied to clipboard!');
+}
+
+// Function to show a toast notification
+function showToast(message, type = 'success') {
+    // Remove any existing toasts
+    $('.toast').remove();
+    
+    // Create the toast
+    const toast = $('<div>').addClass('toast fixed bottom-4 right-4 bg-white p-4 rounded-lg shadow-lg z-50 flex items-center');
+    
+    // Add icon based on type
+    if (type === 'success') {
+        toast.append($('<i>').addClass('fas fa-check-circle text-green-500 mr-2'));
+    } else if (type === 'error') {
+        toast.append($('<i>').addClass('fas fa-times-circle text-red-500 mr-2'));
+    } else if (type === 'warning') {
+        toast.append($('<i>').addClass('fas fa-exclamation-circle text-yellow-500 mr-2'));
+    } else if (type === 'info') {
+        toast.append($('<i>').addClass('fas fa-info-circle text-blue-500 mr-2'));
+    }
+    
+    // Add message
+    toast.append($('<span>').text(message));
+    
+    // Add to body
+    $('body').append(toast);
+    
+    // Animate in
+    toast.css('transform', 'translateY(100px)');
+    toast.css('opacity', '0');
+    setTimeout(() => {
+        toast.css('transition', 'all 0.3s ease-out');
+        toast.css('transform', 'translateY(0)');
+        toast.css('opacity', '1');
+    }, 50);
+    
+    // Animate out after 3 seconds
+    setTimeout(() => {
+        toast.css('transform', 'translateY(100px)');
+        toast.css('opacity', '0');
+        setTimeout(() => {
+            toast.remove();
+        }, 300);
+    }, 3000);
+}
