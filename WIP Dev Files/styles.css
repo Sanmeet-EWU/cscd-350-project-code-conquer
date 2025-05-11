@@ -1,0 +1,77 @@
+:root {
+    --forest-dark: #2C5F2D;
+    --forest-accent: #4CA252;
+    --forest-accent-dark: #3A8A3E;
+    --forest-light: #EEF7EE;
+}
+
+/* Override Tailwind classes */
+.bg-forest-dark {
+    background-color: var(--forest-dark);
+}
+
+.bg-forest-accent {
+    background-color: var(--forest-accent);
+}
+
+.bg-forest-accent-dark {
+    background-color: var(--forest-accent-dark);
+}
+
+.bg-forest-light {
+    background-color: var(--forest-light);
+}
+
+.text-forest-dark {
+    color: var(--forest-dark);
+}
+
+.text-forest-accent {
+    color: var(--forest-accent);
+}
+
+.focus\:ring-forest-accent:focus {
+    --tw-ring-color: var(--forest-accent);
+}
+
+.focus\:border-forest-accent:focus {
+    border-color: var(--forest-accent);
+}
+
+.hover\:bg-forest-accent-dark:hover {
+    background-color: var(--forest-accent-dark);
+}
+
+.hover\:text-forest-accent:hover {
+    color: var(--forest-accent);
+}
+
+/* Hero section styling */
+.hero-section {
+    background: linear-gradient(rgba(44, 95, 45, 0.8), rgba(44, 95, 45, 0.9)), url('https://images.unsplash.com/photo-1511497584788-876760111969?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Background patterns */
+.bg-forest-pattern {
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM30 7C28.343 7 27 8.343 27 10s1.343 3 3 3 3-1.343 3-3-1.343-3-3-3zm-9 70c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm-26 33c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM80 7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm-76 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm91-14c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM31 4c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm39 9c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm15 27c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM27 70c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7z' fill='%234CA252' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--forest-light);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--forest-accent);
+    border-radius: 5px;
+}
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: var(--forest-accent-dark);
+    }
