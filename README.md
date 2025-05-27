@@ -22,8 +22,4 @@ This section explains how to run UI tests for the project using Selenium.
 - Install Selenium WebDriver by running the following command:
   ```bash
   pip install selenium
-
-
-
-
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/5Wo5gQYL)
