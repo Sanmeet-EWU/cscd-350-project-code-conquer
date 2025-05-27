@@ -13,6 +13,17 @@ The problem is the result of a lack of funding allocated towards technological s
 ## User Benefit
 This software would fill a need that reduces both manual staffing burden, as well as would provide a solution that needs minimal ongoing maintenance. 
 
+## Testing
+
+This section explains how to run UI tests for the project using Selenium.
+
+### Prerequisites
+- Ensure you have [Python](https://www.python.org/downloads/) (version 3.8 or higher) installed.
+- Install Selenium WebDriver by running the following command:
+  ```bash
+  pip install selenium
+
+
 
 
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/5Wo5gQYL)
