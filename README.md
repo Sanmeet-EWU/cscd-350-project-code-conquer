@@ -16,7 +16,9 @@ This software would fill a need that reduces both manual staffing burden, as wel
 ## Testing
 
 This section explains how to run UI tests for the project using Selenium.
-
+- Run UI tests with the following command:
+  ```bash
+  python3 ui_testing_driver.py
 ### Prerequisites
 - Ensure you have [Python](https://www.python.org/downloads/) (version 3.8 or higher) installed.
 - Install Selenium WebDriver by running the following command:
