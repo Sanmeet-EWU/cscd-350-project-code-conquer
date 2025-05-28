@@ -6,7 +6,7 @@ import time
 
 print("--- UI TESTING FOR VOLUNTRAX.COM --- \n")
 
-secret = "!QAZ1qaz.com"
+secret = ""
 email = "staff@voluntrax.com"
 
 driver = webdriver.Chrome()
