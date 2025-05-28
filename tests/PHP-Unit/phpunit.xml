@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="tests/bootstrap.php"
+         colors="true"
+         verbose="true"
+         stopOnFailure="false">
+    
+    <!-- Test Suite Configuration -->
+    <testsuites>
+        <testsuite name="VolunTrax Test Suite">
+            <directory>tests</directory>
+        </testsuite>
+    </testsuites>
+    
+    <!-- Code Coverage Configuration -->
+    <coverage processUncoveredFiles="true">
+        <include>
+            <!-- Only include testable business logic -->
+            <directory suffix=".php">./public/functions</directory>
+        </include>
+        
+        <exclude>
+            <!-- Exclude everything else -->
+            <directory>./vendor</directory>
+            <directory>./tests</directory>
+        </exclude>
+        
+        <!-- Coverage Reports -->
+        <report>
+            <html outputDirectory="coverage-html"/>
+            
+            <text outputFile="coverage.txt"/>
+        </report>
+    </coverage>
+        
+    <!-- Environment Variables for Tests -->
+    <php>
+        <env name="DB_HOST" value="localhost"/>
+        <env name="DB_NAME" value="test_voluntrax"/>
+        <env name="DB_USER" value="test_user"/>
+        <env name="DB_PASS" value="XXXXXXXXXXXX"/>
+    </php>
+</phpunit>
+
