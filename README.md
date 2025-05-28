@@ -29,3 +29,7 @@ This section explains how to run UI tests for the project using Selenium.
   ```bash
   pip install selenium
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/5Wo5gQYL)
+
+### Unit and Code Coverage Testing
+This is done automatically, at the top of each hour on the server.  There is a bash script called cactest that runs and updates a results file accessbile at:
+[Test Results](https://voluntrax.com/ct/volunteer_functions.php.html)
