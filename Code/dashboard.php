@@ -23,7 +23,7 @@ if(isset($_SESSION['oid'])) {
     $oid = $_SESSION['oid'];
 } else {
     // If not stored in session, get it from user record
-    $uid = $_SESSION['user_id']; // Assuming user_id is stored in session
+    $uid = $_SESSION['user_id']; 
     $stmt = $conn->prepare("SELECT oid FROM users WHERE uid = ?");
     if($stmt) {
         $stmt->bind_param("i", $uid);

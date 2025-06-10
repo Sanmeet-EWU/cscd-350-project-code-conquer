@@ -30,9 +30,14 @@
                 <a href="#contact" class="hover:text-forest-accent transition duration-300">Contact</a>
             </div>
             <div class="flex items-center space-x-4">
+                <a href="request_hours.php" class="bg-forest-accent hover:bg-forest-accent-dark text-white px-4 py-2 rounded-lg transition duration-300">
+                    <i class="fas fa-download mr-2"></i>Request Hours
+                </a>
                 <a href="login.php" class="bg-forest-accent hover:bg-forest-accent-dark text-white px-4 py-2 rounded-lg transition duration-300">
                     <i class="fas fa-sign-in-alt mr-2"></i>Login
                 </a>
+            
+                
                 <button class="md:hidden text-white focus:outline-none" id="mobile-menu-button">
                     <i class="fas fa-bars text-xl"></i>
                 </button>

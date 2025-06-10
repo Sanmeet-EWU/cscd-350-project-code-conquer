@@ -142,7 +142,7 @@ if ($lid > 0) {
 // Close the database connection
 $conn->close();
 
-// Website base URL - update this to your actual domain
+// Website base URL 
 $base_url = "https://" . $_SERVER['HTTP_HOST'];
 $check_in_url = $base_url . "/volunteer_checkin.php";
 ?>
