@@ -3,6 +3,11 @@
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 [Click here to watch a demo](https://youtu.be/VdgTkMpCSSs?si=SqvYzlEZajvCIPWZ)
 
+## Quck Links:
+[Project Overview](https://github.com/Sanmeet-EWU/cscd-350-project-code-conquer/blob/main/Doc/Running%20Document.md)<br>
+[Developer Guidelines](https://github.com/Sanmeet-EWU/cscd-350-project-code-conquer/blob/main/Doc/Developer%20Documentation.md)
+
+
 ## Problem Statement
    
 Due to funding restrictions, it is often very difficult for non-profit organizations to track the hours and location of all of their various volunteers. Often, this burden falls on a volunteer coordinator that is responsible for trying to keep track of every Volunteer across multiple sites. Considering that many volunteers do so, because of either an academic or legal requirement, our Tracking is of Keyport. Further, for safety reasons, it’s important that the organization knows where all of their active volunteers are located in case of an emergency.
