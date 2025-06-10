@@ -1,5 +1,8 @@
 # VolunTrax by Code & Conquer ⚖️
-[Demo Video](https://youtu.be/VdgTkMpCSSs?si=SqvYzlEZajvCIPWZ)
+[![Demo Video](https://i9.ytimg.com/vi_webp/VdgTkMpCSSs/mq2.webp?sqp=COjNocIG-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGC8gZSgrMA8=&rs=AOn4CLAgH3jpxxa4ILrtzg_u62rdh2jcSg)](https://youtu.be/VdgTkMpCSSs?si=SqvYzlEZajvCIPWZ)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[Click here to watch a demo](https://youtu.be/VdgTkMpCSSs?si=SqvYzlEZajvCIPWZ)
+
 ## Problem Statement
    
 Due to funding restrictions, it is often very difficult for non-profit organizations to track the hours and location of all of their various volunteers. Often, this burden falls on a volunteer coordinator that is responsible for trying to keep track of every Volunteer across multiple sites. Considering that many volunteers do so, because of either an academic or legal requirement, our Tracking is of Keyport. Further, for safety reasons, it’s important that the organization knows where all of their active volunteers are located in case of an emergency.
@@ -28,7 +31,6 @@ This section explains how to run UI tests for the project using Selenium.
 - Install Selenium WebDriver by running the following command:
   ```bash
   pip install selenium
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/5Wo5gQYL)
 
 ### Unit and Code Coverage Testing
 This is done automatically, at the top of each hour on the server.  There is a bash script called cactest that runs and updates a results file accessbile at:
