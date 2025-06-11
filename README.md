@@ -5,7 +5,8 @@
 
 ## Quck Links:
 [Project Overview](https://github.com/Sanmeet-EWU/cscd-350-project-code-conquer/blob/main/Doc/Running%20Document.md)<br>
-[Developer Guidelines](https://github.com/Sanmeet-EWU/cscd-350-project-code-conquer/blob/main/Doc/Developer%20Documentation.md)
+[Developer Guidelines](https://github.com/Sanmeet-EWU/cscd-350-project-code-conquer/blob/main/Doc/Developer%20Documentation.md)<br>
+[User Manual](https://github.com/Sanmeet-EWU/cscd-350-project-code-conquer/blob/main/Doc/User%20Manual.md)
 
 
 ## Problem Statement
