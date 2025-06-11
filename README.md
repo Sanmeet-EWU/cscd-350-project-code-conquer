@@ -1,5 +1,5 @@
 # VolunTrax by Code & Conquer ⚖️
-[![Demo Video](https://i9.ytimg.com/vi_webp/VdgTkMpCSSs/mq2.webp?sqp=COjNocIG-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGC8gZSgrMA8=&rs=AOn4CLAgH3jpxxa4ILrtzg_u62rdh2jcSg)](https://youtu.be/VdgTkMpCSSs?si=SqvYzlEZajvCIPWZ)
+[![Demo Video](https://raw.githubusercontent.com/Sanmeet-EWU/cscd-350-project-code-conquer/refs/heads/main/Doc/v_demo_thumb.png)](https://youtu.be/VdgTkMpCSSs?si=SqvYzlEZajvCIPWZ)
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 [Click here to watch a demo](https://youtu.be/VdgTkMpCSSs?si=SqvYzlEZajvCIPWZ)
 
